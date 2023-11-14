@@ -11,15 +11,27 @@ export class SwnApiGateway extends Construct{
 
     constructor(scope: Construct, id: string, props: SwnApigatewayProps){
         super(scope, id);
-
-
+        //Product-API
         this.createProductApi(props.productMicroservice);
+        //Basket-API
         this.createBasketApi(props.basketMicroservice);
 
         
     }
 
-    createBasketApi(basketMicroservice: IFunction) {
+    private createBasketApi(basketMicroservice: IFunction) {
+        //Basket microservices api gateway
+        //root name=basket
+        //GET /basket
+        // POST /basket
+        
+        // resource name = basket/{userName}
+        // GET /basket/{userName}
+        // DELETE /basket/{userName}
+
+        // POST /basket/checkout
+
+
        const apigw =new LambdaRestApi(this, 'basketApi', {
         restApiName:'Basket Service',
         handler: basketMicroservice,
@@ -40,7 +52,7 @@ export class SwnApiGateway extends Construct{
 
     }
     
-    createProductApi(productMicroservice: IFunction) {
+    private createProductApi(productMicroservice: IFunction) {
         const apigw = new LambdaRestApi(this, 'productApi', {
             restApiName: 'Product Service',
             handler: productMicroservice,
