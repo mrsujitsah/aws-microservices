@@ -1,0 +1,22 @@
+[
+    {
+        "Source": "com.swn.basket.checkoutbasket",
+        "Details": "{\"userNam\": \"swn\", \"basket\":\"Iphone1\"}",
+        "Resource": [
+            "Resource1", 
+            "Resource2"
+        ],
+        "DetailType": "CheckoutBasket",
+        "EventBusName": "SwnEventBus"
+    },
+    {
+        "Source": "com.swn.basket.checkoutbasket",
+        "Details": "{\"userNam\": \"swn\", \"basket\":\"Iphone2\"}",
+        "Resource": [
+            "Resource1", 
+            "Resource2"
+        ],
+        "DetailType": "CheckoutBasket",
+        "EventBusName": "SwnEventBus"
+    }
+]
